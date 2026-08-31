@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ioc
+  profiles:
+    active: dev
+cat:
+  age: 10
+  color: white
