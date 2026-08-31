@@ -1,9 +1,13 @@
 package com.example.ioc.bean;
 
+import com.example.ioc.annotation.UUID;
 import lombok.Data;
 
 @Data
 public class Car {
-   String model;
-   String color;
+    @UUID
+    private String id;
+
+    String model;
+    String color;
 }

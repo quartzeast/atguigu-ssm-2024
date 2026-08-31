@@ -43,7 +43,8 @@ public class IocApplication {
         // springTest14(args);
         // springTest15(args);
         // springTest16(args);
-        springTest17(args);
+        // springTest17(args);
+        springTest18(args);
     }
 
     // 实验 1：启动 Spring 容器，通过 @Bean 注册组件到容器中
@@ -287,12 +288,21 @@ public class IocApplication {
         }
     }
 
-    // 17. @Profile 多环境条件注册
+    // 实验 17：@Profile 多环境条件注册
     public static void springTest17(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(IocApplication.class, args);
 
         DeliveryDao dao = context.getBean(DeliveryDao.class);
         dao.saveDelivery();
+    }
+
+    // 实验 18：生命周期
+    public static void springTest18(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(IocApplication.class, args);
+        System.out.println("--- spring ioc 容器启动完毕 ---");
+
+        Driver driver = context.getBean(Driver.class);
+        System.out.println("driver = " + driver);
     }
 
 }
