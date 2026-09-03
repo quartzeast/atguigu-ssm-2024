@@ -97,4 +97,11 @@ class AopApplicationTests {
         UserService userService = (UserService)  LogDynamicProxy.getProxyInstance(new UserServiceImpl());
         userService.saveUser();
     }
+
+    // 实验 5：使用 aop
+    @Test
+    void aopTest05() {
+        System.out.println(mathCalculator);
+        mathCalculator.add(1, 2);
+    }
 }
